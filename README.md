@@ -10,7 +10,8 @@ A execução desse template apenas irá iniciar o processo de clonar o repositó
 
 #### Rails API
 
-Para iniciar um novo projeto de , basta executar o comando:
+Para iniciar um novo projeto Rails, basta executar o comando:
 ```sh
-rails new my_app --api -d postgresql -m 
+# Substitua 'my_app' pelo nome do projeto
+rails new my_app --api -d postgresql -m https://raw.githubusercontent.com/Null-Bug-Company/rails-template/main/template.rb
 ```
