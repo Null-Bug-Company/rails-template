@@ -2,9 +2,11 @@
 
 require 'tmpdir'
 
-def add_template_repository_to_source_path
+def download_template_repository_and_add_to_source_path
   source_paths.unshift(tempdir = Dir.mktmpdir('boilerplate-api-'))
+
   at_exit { FileUtils.remove_entry(tempdir) }
+
   git clone: [
     'git@github.com:Null-Bug-Company/boilerplate-api.git',
     tempdir
@@ -17,4 +19,4 @@ def add_template_repository_to_source_path
   end
 end
 
-add_template_repository_to_source_path
+download_template_repository_and_add_to_source_path
